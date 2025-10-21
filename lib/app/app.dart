@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Health & Fitness Tracker',
       debugShowCheckedModeBanner: false,
+      // ignore: deprecated_member_use
       useInheritedMediaQuery: true,
-      // locale: DevicePreview.locale(context),
-      // builder: DevicePreview.appBuilder,
       theme: ThemeData(
         brightness: Brightness.dark,
         colorScheme: const ColorScheme.dark(

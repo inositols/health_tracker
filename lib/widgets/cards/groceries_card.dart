@@ -58,11 +58,7 @@ class Button extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton.icon(
         onPressed: () {},
-        icon: const Icon(
-          Icons.add,
-          color: Colors.white,
-          size: 16, // slightly smaller to fit visually
-        ),
+        icon: const Icon(Icons.add, color: Colors.white, size: 16),
         label: Text(
           text,
           style: TextStyle(
@@ -73,14 +69,13 @@ class Button extends StatelessWidget {
         ),
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFFFF6B35),
-          padding: EdgeInsets.zero, // ✅ remove internal padding
+          padding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
           elevation: 0,
-          alignment: Alignment.center, // ✅ centers the text & icon vertically
-          tapTargetSize:
-              MaterialTapTargetSize.shrinkWrap, // ✅ avoids extra height
+          alignment: Alignment.center,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         ),
       ),
     );

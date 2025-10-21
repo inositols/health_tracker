@@ -5,7 +5,7 @@ import 'dart:ui';
 class LiquidGlassCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
-  final bool showDottedBorder; // ✅ make border optional
+  final bool showDottedBorder;
   final Color borderColor;
   final double borderRadius;
   final double blurIntensity;
@@ -14,7 +14,7 @@ class LiquidGlassCard extends StatelessWidget {
     super.key,
     required this.child,
     this.padding,
-    this.showDottedBorder = false, // default: no dotted border
+    this.showDottedBorder = false,
     this.borderColor = const Color(0x33FFFFFF),
     this.borderRadius = 20,
     this.blurIntensity = 20,
@@ -37,8 +37,6 @@ class LiquidGlassCard extends StatelessWidget {
         ),
       ),
     );
-
-    // ✅ If dotted border is requested, wrap with DottedBorder
     if (showDottedBorder) {
       return DottedBorder(
         color: borderColor,
